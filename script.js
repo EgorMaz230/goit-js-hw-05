@@ -232,3 +232,180 @@
 //   mustang.price = 4000;
 //   console.log(mustang.price); // 4000
   
+
+
+
+
+// lesson
+
+
+
+
+
+// class Book {
+//     constructor(title, author, price) {
+//         this.title = title;
+//         this.author = author;
+//         this.price = price;
+//     }
+// }
+
+// class Bookstore {
+//     constructor() {
+//         this.books = [];
+//     }
+
+//     addBook(book) {
+//         this.books.push(book);
+//         console.log(`book "${book.title}" add to book shop.`);
+//     }
+
+//     removeBook(book) {
+//         const index = this.books.indexOf(book);
+//         if (index !== -1) {
+//             this.books.splice(index, 1);
+//             console.log(`book "${book.title}" deleted з book shop.`);
+//         } else {
+//             console.log(`book "${book.title}" nema in book shop.`);
+//         }
+//     }
+
+//     listBooks() {
+//         if (this.books.length === 0) {
+//             console.log("book nema в book shop.");
+//         } else {
+//             console.log("list of book in book shop:");
+//             this.books.forEach(book => {
+//                 console.log(`name: ${book.title}, author: ${book.author}, cena: ${book.price}`);
+//             });
+//         }
+//     }
+// }
+
+// const bookstore = new Bookstore();
+// const book1 = new Book("hharry ppoter", "ja", 25.99);
+// const book2 = new Book("wwar and peace", "ne ja", 19.99);
+
+// bookstore.addBook(book1);
+// bookstore.addBook(book2);
+// bookstore.listBooks();
+
+// bookstore.removeBook(book1);
+// bookstore.listBooks();
+
+
+
+
+
+
+
+
+// class Person {
+//     constructor(name, age) {
+//       this.name = name;
+//       this.age = age;
+//     }
+  
+//     getInfo() {
+//       return `${this.name} is ${this.age} years old`;
+//     }
+//   }
+  
+//   class Employee extends Person {
+//     constructor(name, age, position) {
+//       super(name, age);
+//       this.position = position;
+//     }
+  
+//     getInfo() {
+//       return `${super.getInfo()} and hi is a ${this.position}`;
+//     }
+//   }
+  
+//   const john = new Employee("John", 32, "programmer");
+//   console.log(john.getInfo());
+
+
+
+
+
+
+
+
+
+// class Book {
+//     constructor(title, author, published) {
+//         this.title = title;
+//         this.author = author;
+//         this.published = published;
+//         this.isAvailable = true;
+//     }
+// }
+
+// class Library {
+//     constructor() {
+//         this.books = [];
+//     }
+
+//     addBook(book) {
+//         this.books.push(book);
+//         console.log(`Book '${book.title}' added to the library.`);
+//     }
+
+//     checkOutBook(title) {
+//         const book = this.books.find(book => book.title === title);
+
+//         if (book) {
+//             if (book.isAvailable) {
+//                 book.isAvailable = false;
+//                 console.log(`Book '${title}' checked out successfully.`);
+//             } else {
+//                 console.log(`Book '${title}' is not available for checkout.`);
+//             }
+//         } else {
+//             console.log(`Book '${title}' not found in the library.`);
+//         }
+//     }
+
+//     returnBook(title) {
+//         const book = this.books.find(book => book.title === title);
+
+//         if (book) {
+//             book.isAvailable = true;
+//             console.log(`Book '${title}' returned to the library.`);
+//         } else {
+//             console.log(`Book '${title}' not found in the library.`);
+//         }
+//     }
+
+//     listAvailableBooks() {
+//         const availableBooks = this.books.filter(book => book.isAvailable);
+//         if (availableBooks.length > 0) {
+//             console.log("Available books in the library:");
+//             availableBooks.forEach(book => console.log(`- ${book.title} by ${book.author}`));
+//         } else {
+//             console.log("No available books in the library.");
+//         }
+//     }
+// }
+
+// const library = new Library();
+
+// const book1 = new Book("Hharry Potter", "Illa", 2019);
+// const book2 = new Book("ttitanik", "Tereza", 2033);
+// const book3 = new Book("cherpashki nindzia", "Egor", -3340);
+
+// library.addBook(book1);
+// library.addBook(book2);
+// library.addBook(book3);
+
+// library.listAvailableBooks();
+
+// library.checkOutBook("ttitanik");
+// library.checkOutBook("ttitanik"); 
+
+// library.listAvailableBooks();
+
+// library.returnBook("ttitanik");
+
+// library.listAvailableBooks();
